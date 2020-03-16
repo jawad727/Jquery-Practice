@@ -38,3 +38,11 @@ $(function() { // Event Binding (NOT DRY)
 
 })
 
+$(function() { // Event Binding DRY
+
+    $(".buttn").on("click", function() {
+        var panelId = $(this).attr('data-panelID') //this is the data attribute on the element
+        $("." + panelId).slideToggle(200)
+    });
+
+})
